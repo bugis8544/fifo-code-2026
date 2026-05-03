@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFO CODE — Strategi Kebebasan Finansial Tanpa Gelar</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --black: #0A0A0A;
+  --white: #FAFAF8;
+  --gold: #C9A84C;
+  --gold-light: #E8D08A;
+  --gold-pale: #F5EDD4;
+  --gray-100: #F0EFEC;
+  --gray-200: #E2E0DA;
+  --gray-400: #9E9C95;
+  --gray-600: #5A5850;
+  --green: #1A5C3A;
+  --green-light: #E8F2EC;
+  --red-pale: #FDF0EE;
+  --red: #C0392B;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ─── PAGE WRAPPER ─── */
+.page {
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto 40px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ─── COVER PAGE ─── */
+.cover {
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 72px;
+  min-height: 1123px;
+  position: relative;
+}
+
+.cover-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cover-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 6px 14px;
+  border-radius: 2px;
+}
+
+.cover-edition {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--gray-400);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cover-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 0 40px;
+}
+
+.cover-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cover-eyebrow::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 88px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.cover-title span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.cover-subtitle-main {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gray-400);
+  margin-top: 20px;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.cover-hook {
+  background: rgba(201,168,76,0.12);
+  border-left: 3px solid var(--gold);
+  padding: 20px 28px;
+  max-width: 560px;
+}
+
+.cover-hook p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gold-light);
+  line-height: 1.5;
+}
+
+.cover-stats {
+  display: flex;
+  gap: 48px;
+  margin-top: 52px;
+}
+
+.cover-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cover-stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.cover-stat-label {
+  font-size: 11px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cover-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255,255,255,0.1);
+  align-self: center;
+}
+
+.cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.cover-tagline {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gray-600);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cover-warning {
+  font-size: 11px;
+  color: var(--gray-600);
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* ─── GENERAL CONTENT PAGE ─── */
+.content-page {
+  padding: 72px 72px 60px;
+  min-height: 1123px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── PAGE HEADER ─── */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 52px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.page-chapter {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.page-number {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--gray-400);
+  letter-spacing: 0.1em;
+}
+
+/* ─── SECTION TITLE ─── */
+.section-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.6;
+  max-width: 580px;
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+
+/* ─── BODY TEXT ─── */
+p { margin-bottom: 16px; color: var(--black); }
+p:last-child { margin-bottom: 0; }
+
+/* ─── INTRO LARGE TEXT ─── */
+.lead {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+
+.bold { font-weight: 600; }
+.gold-text { color: var(--gold); font-weight: 600; }
+
+/* ─── HIGHLIGHT BOX ─── */
+.highlight-box {
+  background: var(--black);
+  color: var(--white);
+  padding: 28px 32px;
+  margin: 28px 0;
+  position: relative;
+}
+
+.highlight-box::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--gold);
+}
+
+.highlight-box .label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.highlight-box p {
+  color: var(--white);
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.highlight-box strong { color: var(--gold-light); }
+
+/* ─── GOLD BOX ─── */
+.gold-box {
+  background: var(--gold-pale);
+  border: 1px solid var(--gold-light);
+  padding: 24px 28px;
+  margin: 24px 0;
+  border-radius: 2px;
+}
+
+.gold-box .label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.gold-box p { margin-bottom: 6px; font-size: 14px; }
+.gold-box p:last-child { margin-bottom: 0; }
+
+/* ─── WARNING BOX ─── */
+.warning-box {
+  background: var(--red-pale);
+  border-left: 4px solid var(--red);
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.warning-box .label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.warning-box p { color: var(--black); font-size: 14px; margin-bottom: 6px; }
+
+/* ─── TABLE ─── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 13px;
+}
+
+.data-table thead tr {
+  background: var(--black);
+  color: var(--white);
+}
+
+.data-table thead th {
+  padding: 12px 16px;
+  text-align: left;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.data-table tbody tr:hover {
+  background: var(--gray-100);
+}
+
+.data-table tbody td {
+  padding: 12px 16px;
+  vertical-align: top;
+}
+
+.data-table .gold { color: var(--gold); font-weight: 600; }
+.data-table .green { color: var(--green); font-weight: 600; }
+
+/* ─── STATS GRID ─── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--gray-200);
+  border: 1px solid var(--gray-200);
+  margin: 28px 0;
+}
+
+.stat-card {
+  background: var(--white);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.stat-card .number {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-card .stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-600);
+  margin-bottom: 4px;
+}
+
+.stat-card .stat-desc {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* ─── CHECKLIST ─── */
+.checklist {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 14px;
+}
+
+.checklist li:last-child { border-bottom: none; }
+
+.checklist li::before {
+  content: '□';
+  font-size: 16px;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── STEP LIST ─── */
+.step-list {
+  list-style: none;
+  margin: 20px 0;
+  counter-reset: steps;
+}
+
+.step-list li {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+  counter-increment: steps;
+}
+
+.step-list li .step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--black);
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.step-list li .step-content strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.step-list li .step-content span {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+/* ─── QUOTE ─── */
+.pull-quote {
+  border-top: 3px solid var(--gold);
+  padding: 28px 0 0;
+  margin: 32px 0;
+}
+
+.pull-quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--black);
+  margin-bottom: 14px;
+}
+
+.pull-quote cite {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gray-400);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+/* ─── TWO COLUMN ─── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 24px 0;
+}
+
+.col-card {
+  padding: 24px;
+  border: 1px solid var(--gray-200);
+}
+
+.col-card.dark {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+
+.col-card.light {
+  background: var(--green-light);
+  border-color: #C5DBC9;
+}
+
+.col-card .card-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+
+.col-card.dark .card-title { color: var(--gold); }
+.col-card.light .card-title { color: var(--green); }
+
+.col-card ul {
+  list-style: none;
+  font-size: 13px;
+}
+
+.col-card ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  gap: 10px;
+}
+
+.col-card.light ul li {
+  border-color: rgba(0,0,0,0.06);
+}
+
+.col-card ul li::before {
+  content: '→';
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ─── SCENARIO CARDS ─── */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.scenario-card {
+  padding: 24px 20px;
+  border-top: 4px solid;
+}
+
+.scenario-card.great { border-color: var(--green); background: var(--green-light); }
+.scenario-card.ok { border-color: var(--gold); background: var(--gold-pale); }
+.scenario-card.bad { border-color: var(--red); background: var(--red-pale); }
+
+.scenario-card .s-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.scenario-card.great .s-label { color: var(--green); }
+.scenario-card.ok .s-label { color: #8B6914; }
+.scenario-card.bad .s-label { color: var(--red); }
+
+.scenario-card .s-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--black);
+}
+
+.scenario-card ul {
+  list-style: none;
+  font-size: 12px;
+  color: var(--gray-600);
+}
+
+.scenario-card ul li {
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.scenario-card .s-result {
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ─── TIMELINE ─── */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  margin: 24px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--gray-200);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.timeline-item .t-period {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 4px;
+}
+
+.timeline-item .t-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.timeline-item .t-desc {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+/* ─── DIVIDER ─── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--gray-200);
+  margin: 32px 0;
+}
+
+.gold-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin: 32px 0;
+}
+
+/* ─── SECTION BREAK / CHAPTER OPENER ─── */
+.chapter-opener {
+  background: var(--black);
+  color: var(--white);
+  padding: 80px 72px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.chapter-opener::after {
+  content: attr(data-number);
+  position: absolute;
+  right: 60px;
+  top: 40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.chapter-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chapter-num::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.chapter-opener h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.chapter-opener h2 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.chapter-opener .chapter-desc {
+  font-size: 15px;
+  color: var(--gray-400);
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+/* ─── PRINT / TOC ─── */
+.toc {
+  padding: 72px 72px 60px;
+}
+
+.toc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 48px;
+  color: var(--black);
+}
+
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.toc-chapter {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  width: 60px;
+}
+
+.toc-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.toc-item-subtitle {
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+
+.toc-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--gray-200);
+  margin: 0 8px;
+  margin-bottom: 4px;
+}
+
+.toc-page {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+
+/* ─── REALITA PAHIT BOX ─── */
+.brutal-box {
+  border: 2px solid var(--black);
+  padding: 32px;
+  margin: 28px 0;
+  position: relative;
+}
+
+.brutal-box::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--white);
+  padding: 0 10px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+/* ─── FORMULA ─── */
+.formula {
+  background: var(--black);
+  padding: 28px 32px;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.formula .formula-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.01em;
+}
+
+.formula .formula-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gray-400);
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ─── CLOSING CTA ─── */
+.cta-section {
+  background: var(--black);
+  padding: 72px 72px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--gold);
+}
+
+.cta-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 8px 16px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  max-width: 560px;
+}
+
+.cta-title em { color: var(--gold); font-style: italic; }
+
+.cta-body {
+  font-size: 16px;
+  color: var(--gray-400);
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: 44px;
+}
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cta-action {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cta-action .action-num {
+  width: 36px;
+  height: 36px;
+  background: var(--gold);
+  color: var(--black);
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-action .action-text strong {
+  display: block;
+  color: var(--white);
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.cta-action .action-text span {
+  color: var(--gray-600);
+  font-size: 13px;
+}
+
+.cta-urgency {
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  gap: 32px;
+}
+
+.cta-urgency-item {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gray-600);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta-urgency-item::before {
+  content: '⚠';
+  color: var(--gold);
+}
+
+@media print {
+  body { background: white; }
+  .page { margin: 0; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     COVER PAGE
+════════════════════════════════════════ -->
+<div class="page cover" id="cover">
+  <div class="cover-noise"></div>
+
+  <div class="cover-top">
+    <div class="cover-badge">Edisi Premium 2026</div>
+    <div class="cover-edition">Panduan Strategi Keuangan · Vol. I</div>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-eyebrow">Strategi Kebebasan Finansial Tanpa Gelar</div>
+    <div class="cover-title">FIFO<br><span>CODE</span></div>
+    <div class="cover-subtitle-main">
+      Bagaimana Lulusan SMA Bisa Pensiun di Usia 35<br>
+      Saat Sarjana Masih Nyicil KPR
+    </div>
+    <div class="cover-hook">
+      <p>Sistem 3–5 tahun untuk mengubah tenaga muda menjadi mesin uang pasif Rp 5–15 juta/bulan — menggunakan arbitrase geografis, gaji tambang Australia, dan investasi syariah.</p>
+    </div>
+    <div class="cover-stats">
+      <div class="cover-stat">
+        <div class="cover-stat-number">3–5</div>
+        <div class="cover-stat-label">Tahun Kerja</div>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-stat">
+        <div class="cover-stat-number">Rp 1,5M</div>
+        <div class="cover-stat-label">Target Aset</div>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-stat">
+        <div class="cover-stat-number">4%</div>
+        <div class="cover-stat-label">Aturan Bebas</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div style="display:flex; flex-direction:column; gap:6px;">
+      <div class="cover-tagline">FIFO Code · Edisi Premium 2025</div>
+      <div style="font-family:'Playfair Display',serif; font-size:15px; font-weight:700; font-style:italic; color:var(--gold-light);">Muchlis Abada</div>
+      <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--gray-600); text-transform:uppercase; letter-spacing:0.1em;">Penyusun</div>
+    </div>
+    <div class="cover-warning">Bukan motivasi kosong.<br>Ini adalah peta jalan yang bisa dieksekusi.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     KATA PENGANTAR
+════════════════════════════════════════ -->
+<div class="page content-page" style="justify-content: center;">
+  <div class="page-header">
+    <div class="page-chapter">Kata Pengantar</div>
+    <div class="page-number">FIFO CODE</div>
+  </div>
+
+  <div style="max-width: 580px; margin: 0 auto; flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px 0 60px;">
+
+    <div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.2em; color:var(--gold); text-transform:uppercase; margin-bottom:20px; display:flex; align-items:center; gap:10px;">
+      <span style="display:block; width:24px; height:1px; background:var(--gold);"></span>
+      Dari Penyusun
+    </div>
+
+    <h2 style="font-family:'Playfair Display',serif; font-size:36px; font-weight:900; line-height:1.1; letter-spacing:-0.02em; color:var(--black); margin-bottom:32px;">Buku Ini Lahir<br>dari Rasa <em style="color:var(--gold); font-style:italic;">Cinta</em><br>Seorang Ayah</h2>
+
+    <p style="font-size:16px; line-height:1.8; color:var(--black); margin-bottom:20px;">Jujur saja — e-book ini awalnya tidak dirancang untuk dijual.</p>
+
+    <p style="font-size:15px; line-height:1.8; color:var(--gray-600); margin-bottom:20px;">Saya menyusunnya pertama kali sebagai panduan pribadi untuk kedua anak laki-laki saya. Yang pertama sudah berusia 24 tahun — berada tepat di usia ketika jendela peluang ini paling terbuka lebar. Yang kedua baru 15 tahun — masih punya waktu untuk menyiapkan diri dengan benar.</p>
+
+    <p style="font-size:15px; line-height:1.8; color:var(--gray-600); margin-bottom:20px;">Saya tidak ingin mereka menemukan informasi ini terlambat, seperti yang terjadi pada banyak orang. Saya ingin mereka punya peta — sebelum mereka membutuhkannya.</p>
+
+    <p style="font-size:15px; line-height:1.8; color:var(--gray-600); margin-bottom:28px;">Tapi kemudian saya berpikir: <span style="color:var(--black); font-weight:600;">kalau ini cukup baik untuk anak-anak saya, kenapa tidak dibagikan kepada lulusan SMA lainnya yang juga layak mendapatkan informasi yang sama?</span> Maka buku panduan keluarga ini akhirnya menjadi produk digital yang ada di tanganmu sekarang.</p>
+
+    <div style="background: var(--gold-pale); border-left: 3px solid var(--gold); padding: 24px 28px; margin-bottom: 36px;">
+      <p style="font-size:15px; line-height:1.7; color:var(--black); margin:0; font-style:italic;">"Semoga e-book ini menjadi warisan digital yang bermanfaat — tidak hanya untuk kedua putra saya, tapi untuk setiap anak muda Indonesia yang berani bermimpi lebih besar dari lingkungannya."</p>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:20px; padding-top:28px; border-top:1px solid var(--gray-200);">
+      <div style="width:52px; height:52px; background:var(--black); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Playfair Display',serif; font-size:20px; font-weight:700; color:var(--gold);">M</span>
+      </div>
+      <div>
+        <div style="font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:var(--black); margin-bottom:2px;">Muchlis Abada</div>
+        <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--gray-400); text-transform:uppercase; letter-spacing:0.12em;">Penyusun · FIFO Code</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TABLE OF CONTENTS
+════════════════════════════════════════ -->
+<div class="page toc">
+  <div class="page-header">
+    <div class="page-chapter">Daftar Isi</div>
+    <div class="page-number">FIFO CODE</div>
+  </div>
+
+  <div class="toc-title">Apa Yang Ada<br>di Dalam Buku Ini</div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Prolog</div>
+    <div>
+      <div class="toc-item-title">Realita Pahit Yang Tidak Diajarkan di Sekolah</div>
+      <div class="toc-item-subtitle">Perbandingan brutal: kuliah 4 tahun vs FIFO 3 tahun</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">04</div>
+  </div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Bab I</div>
+    <div>
+      <div class="toc-item-title">Mindset Arbitrase Geografis — The Cheat Code</div>
+      <div class="toc-item-subtitle">Mengapa Dollar + Rupiah = Jalan Pintas Legal</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">08</div>
+  </div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Bab II</div>
+    <div>
+      <div class="toc-item-title">Persiapan di Tanah Air — Membangun Amunisi</div>
+      <div class="toc-item-subtitle">Modal Rp 70–80 juta & dokumen visa WHV</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">14</div>
+  </div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Bab III</div>
+    <div>
+      <div class="toc-item-title">Operasi Pendaratan — The Critical Phase</div>
+      <div class="toc-item-subtitle">72 jam pertama di Australia: jangan sampai salah langkah</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">20</div>
+  </div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Bab IV</div>
+    <div>
+      <div class="toc-item-title">Strategi FIFO — Masuk ke Industri Gaji Tertinggi</div>
+      <div class="toc-item-subtitle">Posisi entry level, taktik melamar, & upgrade skill</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">26</div>
+  </div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Bab V</div>
+    <div>
+      <div class="toc-item-title">Arsitektur Keuangan Yusuf & Aturan 4%</div>
+      <div class="toc-item-subtitle">Formula distribusi gaji, target aset, instrumen investasi syariah</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">34</div>
+  </div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Bab VI</div>
+    <div>
+      <div class="toc-item-title">Exit Plan — Slow Living & Merdeka Finansial</div>
+      <div class="toc-item-subtitle">Pulang bukan karena kalah — tapi karena sudah menang</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">42</div>
+  </div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Bonus</div>
+    <div>
+      <div class="toc-item-title">Simulasi 3 Skenario + Jebakan Fatal</div>
+      <div class="toc-item-subtitle">Disiplin vs Biasa vs Gagal — dan di mana orang biasanya salah</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">48</div>
+  </div>
+
+  <div class="toc-item">
+    <div class="toc-chapter">Penutup</div>
+    <div>
+      <div class="toc-item-title">Checklist 30 Hari + Tindakan Sekarang</div>
+      <div class="toc-item-subtitle">Karena membaca tanpa tindakan adalah buang waktu</div>
+    </div>
+    <div class="toc-dots"></div>
+    <div class="toc-page">54</div>
+  </div>
+
+  <div style="margin-top: 48px; padding: 24px; background: var(--gray-100); border-left: 3px solid var(--gold);">
+    <p style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 8px;">Catatan Penting</p>
+    <p style="font-size: 13px; color: var(--gray-600); margin: 0; line-height: 1.6;">Buku ini bukan motivasi. Semua angka berdasarkan data nyata industri tambang Australia per 2024. Risiko tetap ada dan dibahas secara jujur di setiap bab. Hasilmu bergantung sepenuhnya pada eksekusi.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PROLOG — REALITA PAHIT
+════════════════════════════════════════ -->
+<div class="page chapter-opener" data-number="P">
+  <div class="chapter-num">Prolog</div>
+  <h2>Realita Pahit<br>Yang Tidak Pernah<br><em>Diajarkan di Sekolah</em></h2>
+  <p class="chapter-desc">Dua jalur. Dua hasil yang sangat berbeda. Dan tidak ada yang memberitahumu mana yang lebih cepat membawamu ke kebebasan finansial.</p>
+</div>
+
+<div class="page content-page">
+  <div class="page-header">
+    <div class="page-chapter">Prolog — Realita Pahit</div>
+    <div class="page-number">04</div>
+  </div>
+
+  <p class="lead">Kamu sudah lulus SMA. Semua orang menyuruh kamu kuliah. Tapi tidak ada yang pernah menunjukkan angkanya secara jujur.</p>
+
+  <p>Ini bukan tentang kuliah itu salah. Ini tentang trade-off yang tidak pernah dijelaskan: <span class="bold">kamu menukar waktu produktif terbaik hidupmu untuk sebuah gelar</span> — sementara ada jalur lain yang bisa membuatmu pensiun sebelum teman-temanmu wisuda pascasarjana.</p>
+
+  <div class="brutal-box" data-label="Perbandingan Brutal — Data Tidak Bohong">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Jalur Sarjana</th>
+          <th>Jalur FIFO (Buku Ini)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Durasi sebelum penghasilan nyata</td>
+          <td>4–5 tahun kuliah + 1 tahun cari kerja</td>
+          <td class="green">6–12 bulan persiapan</td>
+        </tr>
+        <tr>
+          <td>Biaya awal</td>
+          <td>Rp 100–400 juta (SPP + biaya hidup)</td>
+          <td class="green">Rp 70–80 juta (modal sekali)</td>
+        </tr>
+        <tr>
+          <td>Gaji awal</td>
+          <td>Rp 4–7 juta/bulan (fresh grad)</td>
+          <td class="green">AU$1.400–2.200/minggu (≈Rp 55–90 juta/bulan)</td>
+        </tr>
+        <tr>
+          <td>Tabungan di usia 28</td>
+          <td>Rp 50–150 juta (jika disiplin)</td>
+          <td class="green">Rp 800 juta – 1,5 miliar</td>
+        </tr>
+        <tr>
+          <td>Potensi pensiun dini</td>
+          <td>Usia 55–60 (pensiun normal)</td>
+          <td class="green">Usia 30–35 (jika disiplin)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pull-quote">
+    <p>"Raja Waktu yang sesungguhnya bukan mahasiswa S2. Itu adalah kamu — lulusan SMA yang punya 10 tahun sebelum batas usia visa Working Holiday."</p>
+    <cite>Prinsip Dasar Buku Ini</cite>
+  </div>
+
+  <div class="highlight-box">
+    <div class="label">⚡ Insight Kunci</div>
+    <p>Lulusan SMA berusia 18–20 tahun memiliki <strong>jendela waktu 10–12 tahun</strong> sebelum batas usia visa Working Holiday (30 tahun). Jika teman sebayamu kuliah, mereka baru mulai serius menabung di usia 24–26. Kamu sudah bisa memiliki aset Rp 1,5 miliar pada usia yang sama.</p>
+  </div>
+
+  <p>Buku ini bukan menjanjikan kekayaan instan. Ini adalah sistem yang bekerja — tapi hanya jika kamu eksekusi dengan disiplin. Bab demi bab, kamu akan mendapatkan mekanisme lengkap, bukan sekadar motivasi.</p>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BAB I — MINDSET
+════════════════════════════════════════ -->
+<div class="page chapter-opener" data-number="I">
+  <div class="chapter-num">Bab I</div>
+  <h2>Mindset<br>Arbitrase<br><em>Geografis</em></h2>
+  <p class="chapter-desc">Strategi "curang" yang legal: hasilkan Dollar di negara kaya, habiskan Rupiah di negara murah. Selisihnya adalah mesin kekayaanmu.</p>
+</div>
+
+<div class="page content-page">
+  <div class="page-header">
+    <div class="page-chapter">Bab I — Mindset Arbitrase Geografis</div>
+    <div class="page-number">08</div>
+  </div>
+
+  <div class="section-eyebrow">The Cheat Code</div>
+  <div class="section-title">Mengapa Dollar<br>+ Rupiah = <em>Leverage</em></div>
+  <div class="section-subtitle">Kamu tidak butuh modal besar. Kamu butuh beda kurs yang bekerja untukmu 24 jam sehari.</div>
+
+  <p class="lead">Arbitrase geografis adalah strategi paling sederhana yang menghasilkan efek paling dramatis. Inti idenya bisa ditulis dalam satu kalimat:</p>
+
+  <div class="formula">
+    <div class="formula-text">Hasilkan dalam mata uang kuat → Hemat → Investasikan di negara biaya rendah</div>
+    <div class="formula-note">Prinsip Arbitrase Geografis</div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number">AU$2.000</div>
+      <div class="stat-label">Gaji/Minggu FIFO</div>
+      <div class="stat-desc">Rata-rata entry level tambang</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">≈ Rp 80 jt</div>
+      <div class="stat-label">Ekuivalen Rupiah</div>
+      <div class="stat-desc">Per minggu, bukan per bulan</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">15×</div>
+      <div class="stat-label">Daya Ungkit</div>
+      <div class="stat-desc">vs fresh grad S1 Indonesia</div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top: 32px;">Mekanisme Kunci</div>
+  <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 16px;">Prinsip 7 Tahun Subur Nabi Yusuf</h3>
+
+  <p>Kisah Nabi Yusuf AS bukan sekadar cerita spiritual. Ini adalah blue print manajemen sumber daya tertua di dunia: <span class="bold">simpan secara agresif saat masa kelimpahan, agar bisa bertahan jauh melewati masa itu.</span></p>
+
+  <div class="two-col">
+    <div class="col-card dark">
+      <div class="card-title">Masa Subur (FIFO)</div>
+      <ul>
+        <li>Gaji AU$80.000–130.000/tahun</li>
+        <li>Biaya hidup ditanggung perusahaan</li>
+        <li>Saving rate 60–70% secara realistis</li>
+        <li>Durasi ideal: 3–5 tahun</li>
+      </ul>
+    </div>
+    <div class="col-card light">
+      <div class="card-title">Masa Tenang (Pulang)</div>
+      <ul>
+        <li>Hidup dari hasil investasi</li>
+        <li>Pengeluaran Rp 5–8 juta/bulan</li>
+        <li>Portofolio menghasilkan pasif</li>
+        <li>Kebebasan penuh atas waktu</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gold-box">
+    <div class="label">💡 Target Angka Keramat</div>
+    <p><strong>Aturan 4%:</strong> Tarik 4% dari total aset/tahun → uang tidak pernah habis sepanjang hidupmu.</p>
+    <p><strong>Ingin Rp 5 juta/bulan?</strong> → Butuh aset Rp 1,5 Miliar</p>
+    <p><strong>Ingin Rp 10 juta/bulan?</strong> → Butuh aset Rp 3 Miliar</p>
+    <p><strong>Dengan disiplin FIFO:</strong> Rp 1,5 Miliar bisa tercapai dalam <strong>2,5–4 tahun.</strong></p>
+  </div>
+
+  <div class="warning-box">
+    <div class="label">⚠ Kesalahan Fatal #1</div>
+    <p><strong>Lifestyle Inflation.</strong> Gaji pertama masuk → beli motor baru, kirim uang berlebihan, liburan mewah. Ini adalah jebakan yang membuat mayoritas pekerja tambang pulang dengan tangan kosong.</p>
+    <p>Solusi: Tetapkan "angka keramat" sebelum berangkat. Tulis di tempat yang terlihat setiap hari. Semua keputusan keuangan dikembalikan ke satu pertanyaan: <em>apakah ini mendekati atau menjauhkan dari angka itu?</em></p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BAB II — PERSIAPAN
+════════════════════════════════════════ -->
+<div class="page chapter-opener" data-number="II">
+  <div class="chapter-num">Bab II</div>
+  <h2>Persiapan<br>di Tanah Air —<br><em>Bangun Amunisi</em></h2>
+  <p class="chapter-desc">Berangkat tanpa rencana dan modal yang kuat hanya akan mempercepat kepulangan. Ini adalah fase yang menentukan sebelum kamu bahkan naik pesawat.</p>
+</div>
+
+<div class="page content-page">
+  <div class="page-header">
+    <div class="page-chapter">Bab II — Persiapan di Tanah Air</div>
+    <div class="page-number">14</div>
+  </div>
+
+  <div class="section-eyebrow">Blueprint Modal</div>
+  <div class="section-title">Rp 70–80 Juta:<br><em>Harga Tiket</em> Menuju Kebebasan</div>
+  <div class="section-subtitle">Ini bukan biaya kuliah. Ini adalah modal investasi satu kali yang akan menghasilkan 20–50× lipatnya dalam 5 tahun.</div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Komponen Biaya</th>
+        <th>Estimasi</th>
+        <th>Prioritas</th>
+        <th>Catatan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tiket pesawat PP</td>
+        <td>Rp 8–12 juta</td>
+        <td class="green">Wajib</td>
+        <td>Beli 3–4 bulan sebelum berangkat</td>
+      </tr>
+      <tr>
+        <td>Visa WHV 462</td>
+        <td>Rp 6–7 juta</td>
+        <td class="green">Wajib</td>
+        <td>Bayar saat apply, non-refundable</td>
+      </tr>
+      <tr>
+        <td>Biaya hidup 3 bulan pertama</td>
+        <td>Rp 28–32 juta</td>
+        <td class="green">Wajib</td>
+        <td>Sebelum gaji FIFO pertama masuk</td>
+      </tr>
+      <tr>
+        <td>Sertifikasi wajib (White Card, dll)</td>
+        <td>Rp 2–5 juta</td>
+        <td class="green">Wajib</td>
+        <td>White Card adalah syarat masuk site</td>
+      </tr>
+      <tr>
+        <td>Dana darurat</td>
+        <td>Rp 10–15 juta</td>
+        <td class="gold">Sangat Disarankan</td>
+        <td>Untuk keadaan darurat medis/kepulangan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <div class="label">🚀 Strategi Jika Mulai dari Rp 0</div>
+    <p>Gunakan <strong>18–24 bulan</strong> sebelum berangkat untuk membangun income tambahan melalui freelance digital. Pilih satu skill: <strong>video editing (CapCut/DaVinci), desain grafis (Canva/Figma), atau copywriting</strong>. Target: Rp 3–8 juta/bulan. Setelah punya portofolio lokal, masuk ke Fiverr/Upwork dan hasilkan <strong>USD 5–15/jam</strong> — bahkan sebelum kamu memegang Dollar dari tambang.</p>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top: 36px;">Amunisi Dokumen</div>
+  <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 20px;">Checklist Visa WHV 462</h3>
+
+  <ul class="checklist">
+    <li><div><strong>SDUWHV (Surat Dukungan Ditjen Imigrasi RI)</strong><br><span style="color: var(--gray-600); font-size: 13px;">Syarat mutlak. Kuota sangat terbatas, diperebutkan — pantau pengumuman resmi secara rutin dan ajukan segera saat kuota dibuka.</span></div></li>
+    <li><div><strong>Skor IELTS minimum 4.5 (target 6.0+)</strong><br><span style="color: var(--gray-600); font-size: 13px;">Skor 6.0+ meningkatkan daya tawar saat melamar kerja secara signifikan.</span></div></li>
+    <li><div><strong>Bukti tabungan minimal AU$5.000 (≈ Rp 55–65 juta)</strong><br><span style="color: var(--gray-600); font-size: 13px;">Harus atas nama pemohon, rekening aktif minimal 3 bulan.</span></div></li>
+    <li><div><strong>Paspor valid minimal 18 bulan</strong><br><span style="color: var(--gray-600); font-size: 13px;">Urus ini pertama. Jangan tunggu modal terkumpul baru urus paspor.</span></div></li>
+    <li><div><strong>SKCK + terjemahan tersumpah</strong><br><span style="color: var(--gray-600); font-size: 13px;">Harus dilakukan oleh penerjemah tersumpah resmi.</span></div></li>
+  </ul>
+
+  <div class="gold-box">
+    <div class="label">⚡ Shortcut Terpenting</div>
+    <p><strong>Jangan tunggu modal Rp 70 juta terkumpul baru urus dokumen.</strong> Urus paspor dan mulai belajar bahasa Inggris hari ini. Kecepatan eksekusi administrasi seringkali menentukan siapa yang mendapatkan kuota visa yang sangat terbatas.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BAB III — PENDARATAN
+════════════════════════════════════════ -->
+<div class="page chapter-opener" data-number="III">
+  <div class="chapter-num">Bab III</div>
+  <h2>Operasi<br>Pendaratan —<br><em>The Critical Phase</em></h2>
+  <p class="chapter-desc">Tiga bulan pertama adalah fase paling rentan. Satu kesalahan di sini bisa membuyarkan semua rencana. Ini adalah protokol 72 jam yang tidak boleh diabaikan.</p>
+</div>
+
+<div class="page content-page">
+  <div class="page-header">
+    <div class="page-chapter">Bab III — Operasi Pendaratan</div>
+    <div class="page-number">20</div>
+  </div>
+
+  <div class="section-eyebrow">Pemilihan Kota</div>
+  <div class="section-title">Perth atau Darwin?<br>Pilih dengan <em>Strategi</em></div>
+
+  <div class="two-col">
+    <div class="col-card dark">
+      <div class="card-title">Perth — Pilihan Utama</div>
+      <ul>
+        <li>Hub terbesar industri pertambangan RI</li>
+        <li>Iron Ore di Pilbara, Emas di Kalgoorlie</li>
+        <li>Banyak kantor labour hire agency</li>
+        <li>Komunitas Indonesia terbesar</li>
+        <li>Koneksi ke Pilbara (gaji tertinggi)</li>
+      </ul>
+    </div>
+    <div class="col-card light">
+      <div class="card-title">Darwin — Alternatif Strategis</div>
+      <ul>
+        <li>Gerbang proyek gas LNG & offshore</li>
+        <li>Persaingan entry level lebih rendah</li>
+        <li>Cocok untuk posisi oil & gas support</li>
+        <li>Lebih dekat secara budaya ke Asia</li>
+        <li>Biaya hidup sedikit lebih rendah</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top: 36px;">Protokol Darurat</div>
+  <div class="section-title" style="font-size: 28px;">Checklist Wajib <em>72 Jam Pertama</em></div>
+
+  <ol class="step-list">
+    <li>
+      <div class="step-num">H1</div>
+      <div class="step-content">
+        <strong>Daftar Tax File Number (TFN) online</strong>
+        <span>Buka mygov.gov.au segera. Tanpa TFN, kamu dikenakan pajak tertinggi 45% — artinya hampir separuh gajimu hilang ke pemerintah.</span>
+      </div>
+    </li>
+    <li>
+      <div class="step-num">H1-2</div>
+      <div class="step-content">
+        <strong>Buka rekening bank lokal</strong>
+        <span>Commonwealth atau ANZ. Bawa paspor dan bukti alamat sementara. Tanpa ini, tidak ada gaji yang bisa masuk dari perusahaan Australia.</span>
+      </div>
+    </li>
+    <li>
+      <div class="step-num">H2-3</div>
+      <div class="step-content">
+        <strong>Beli SIM card lokal</strong>
+        <span>Optus atau Woolworths Mobile. Nomor Australia wajib ada di CV — tanpa ini, agensi kerja tidak akan memproses lamaranmu.</span>
+      </div>
+    </li>
+    <li>
+      <div class="step-num">H3-7</div>
+      <div class="step-content">
+        <strong>Ambil White Card (Sertifikat Induksi Konstruksi)</strong>
+        <span>Biaya AU$50–80. Ini adalah syarat mutlak untuk masuk ke area kerja fisik apapun di Australia. Jangan tunda ini.</span>
+      </div>
+    </li>
+  </ol>
+
+  <div class="highlight-box">
+    <div class="label">💡 Strategi Batu Loncatan</div>
+    <p>Ambil pekerjaan apa saja di 3 bulan pertama: hospitality, warehouse, atau cleaning. Rekruter FIFO sangat menekankan referensi dari supervisor Australia. Pekerjaan <strong>warehouse atau construction cleaning</strong> sangat dekat dengan lingkungan kerja lapangan — referensinya dianggap sangat berharga oleh agensi pertambangan.</p>
+  </div>
+
+  <div class="gold-box">
+    <div class="label">💰 Hemat Biaya Awal — Shortcut Nyata</div>
+    <p>Jangan sewa kamar hostel sendiri. Masuk ke <strong>grup Facebook komunitas Indonesia di Perth/Darwin</strong> untuk cari share house di AU$150–200/minggu. Selisih yang kamu hemat bisa dipakai untuk ambil lisensi <strong>Forklift (LF) atau First Aid</strong> — yang akan meningkatkan nilai jual CV-mu secara instan.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BAB IV — STRATEGI FIFO
+════════════════════════════════════════ -->
+<div class="page chapter-opener" data-number="IV">
+  <div class="chapter-num">Bab IV</div>
+  <h2>Strategi FIFO —<br>Masuk ke Industri<br><em>Gaji Tertinggi</em></h2>
+  <p class="chapter-desc">FIFO adalah mesin akumulasi kapital paling efisien: perusahaan menanggung tiket, akomodasi, dan makan. Pengeluaranmu praktis nol selama masa kerja.</p>
+</div>
+
+<div class="page content-page">
+  <div class="page-header">
+    <div class="page-chapter">Bab IV — Strategi FIFO</div>
+    <div class="page-number">26</div>
+  </div>
+
+  <div class="section-eyebrow">Posisi Entry Level</div>
+  <div class="section-title">Kamu <em>Tidak Perlu</em><br>Jadi Insinyur</div>
+  <div class="section-subtitle">Empat jalur masuk yang realistis tanpa pengalaman tambang — mulai minggu depan.</div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Posisi</th>
+        <th>Gaji/Minggu</th>
+        <th>Syarat Khusus</th>
+        <th>Jenjang Karir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Utility / Housekeeping</strong><br><span style="font-size:12px;color:var(--gray-400)">Bersihkan area kamp</span></td>
+        <td class="gold">AU$1.400–1.800</td>
+        <td>White Card</td>
+        <td>Cleaning Supervisor</td>
+      </tr>
+      <tr>
+        <td><strong>Kitchen Hand</strong><br><span style="font-size:12px;color:var(--gray-400)">Bantu dapur kantin kamp</span></td>
+        <td class="gold">AU$1.400–1.900</td>
+        <td>Food Handling Certificate</td>
+        <td>Camp Cook / Chef</td>
+      </tr>
+      <tr>
+        <td><strong>Trade Assistant (TA)</strong><br><span style="font-size:12px;color:var(--gray-400)">Bantu mekanik/teknisi</span></td>
+        <td class="gold">AU$1.600–2.200</td>
+        <td>White Card + Basic Tools</td>
+        <td>Auto Electrician / Fitter</td>
+      </tr>
+      <tr>
+        <td><strong>General Labourer</strong><br><span style="font-size:12px;color:var(--gray-400)">Pekerjaan manual umum</span></td>
+        <td class="gold">AU$1.500–2.000</td>
+        <td>White Card</td>
+        <td>Crew Leader / Supervisor</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-eyebrow" style="margin-top: 32px;">Taktik Melamar</div>
+  <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 20px;">Cara Masuk yang Benar-Benar Bekerja</h3>
+
+  <ol class="step-list">
+    <li>
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <strong>Daftar ke Labour Hire Agency</strong>
+        <span>WorkPac, Skilled, atau Programmed punya akses ke posisi yang tidak diiklankan secara publik. Datang langsung ke kantor — jangan hanya kirim email.</span>
+      </div>
+    </li>
+    <li>
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <strong>Aktifkan notifikasi Seek.com.au</strong>
+        <span>Kata kunci: 'FIFO entry level Perth' dan 'FIFO entry level Darwin'. Balas dalam 2 jam saat notif masuk — kecepatan respons adalah nilai jualmu.</span>
+      </div>
+    </li>
+    <li>
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <strong>Resume Australia-style yang benar</strong>
+        <span>Maksimal 2 halaman. Format ATS-friendly: tanpa foto, tanpa tabel, tanpa warna mencolok. Cantumkan nomor telepon Australia dan status "Available immediately".</span>
+      </div>
+    </li>
+    <li>
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <strong>Manfaatkan "Referral Power"</strong>
+        <span>Bergabung di grup Facebook 'FIFO Focus' dan 'Indonesia Workers Perth WA'. Lowongan internal dari sesama pekerja jauh lebih mudah didapat dari jalur resmi.</span>
+      </div>
+    </li>
+  </ol>
+
+  <div class="highlight-box">
+    <div class="label">⚡ Shortcut: Investasi Lisensi</div>
+    <p>Daripada menunggu posisi Utility, ambil <strong>lisensi Forklift (LF) atau HR Truck License</strong> di minggu liburmu. Biaya AU$300–900, tapi bisa menaikkan nilai tawar gajimu <strong>AU$2–8 per jam</strong>. Dalam setahun, selisihnya bisa AU$4.000–16.000 ekstra.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BAB V — ARSITEKTUR KEUANGAN
+════════════════════════════════════════ -->
+<div class="page chapter-opener" data-number="V">
+  <div class="chapter-num">Bab V</div>
+  <h2>Arsitektur<br>Keuangan Yusuf<br><em>&amp; Aturan 4%</em></h2>
+  <p class="chapter-desc">Gaji besar tidak otomatis menjadi kekayaan. Tanpa sistem yang ketat, gaji tambang bisa habis lebih cepat dari gaji kantoran. Ini adalah cetak biru yang mengubah keringat menjadi kebebasan.</p>
+</div>
+
+<div class="page content-page">
+  <div class="page-header">
+    <div class="page-chapter">Bab V — Arsitektur Keuangan</div>
+    <div class="page-number">34</div>
+  </div>
+
+  <div class="section-eyebrow">Formula Distribusi</div>
+  <div class="section-title">Setiap Gaji Masuk,<br>Eksekusi <em>Formula Ini</em></div>
+  <div class="section-subtitle">Jangan tunggu gaji masuk baru mikir mau diapakan. Keputusan sudah harus dibuat sebelum uangnya ada di tanganmu.</div>
+
+  <div class="stats-grid">
+    <div class="stat-card" style="background: var(--black);">
+      <div class="number">70%</div>
+      <div class="stat-label" style="color:var(--gray-400);">Simpan & Investasi</div>
+      <div class="stat-desc" style="color:var(--gray-600);">SBN, properti, deposito syariah</div>
+    </div>
+    <div class="stat-card" style="background: var(--gray-100);">
+      <div class="number" style="color:var(--black);">20%</div>
+      <div class="stat-label">Biaya Hidup Off-Swing</div>
+      <div class="stat-desc">Sewa, makan, transportasi saat libur</div>
+    </div>
+    <div class="stat-card" style="background: var(--gold-pale);">
+      <div class="number" style="color:var(--gold);">10%</div>
+      <div class="stat-label" style="color: #8B6914;">Dana Darurat & Sedekah</div>
+      <div class="stat-desc">Tidak disentuh kecuali darurat medis</div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top: 32px;">Aturan 4% — Fondasi Merdeka</div>
+  <p>Berdasarkan <em>Trinity Study</em> (1998), penelitian paling berpengaruh dalam sejarah perencanaan pensiun: seseorang bisa menarik 4% dari total aset investasinya setiap tahun tanpa pernah kehabisan uang — karena pertumbuhan rata-rata investasi melampaui tingkat penarikan tersebut.</p>
+
+  <div class="formula">
+    <div class="formula-text">Total Aset = Pengeluaran Bulanan × 300</div>
+    <div class="formula-note">Rumus Aturan 4% — Dasar Kebebasan Finansialmu</div>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Profil Gaya Hidup</th>
+        <th>Pengeluaran/Bulan</th>
+        <th>Target Aset</th>
+        <th>Estimasi Tahun FIFO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Sederhana di Desa</strong><br><span style="font-size:12px;color:var(--gray-400)">Biaya rendah, tenang</span></td>
+        <td>Rp 5 juta</td>
+        <td class="gold">Rp 1,5 Miliar</td>
+        <td class="green">2,5–3,5 Tahun</td>
+      </tr>
+      <tr>
+        <td><strong>Nyaman di Kota Kecil</strong><br><span style="font-size:12px;color:var(--gray-400)">Kualitas baik, fleksibel</span></td>
+        <td>Rp 8 juta</td>
+        <td class="gold">Rp 2,4 Miliar</td>
+        <td class="green">3,5–5 Tahun</td>
+      </tr>
+      <tr>
+        <td><strong>Nyaman di Kota Besar</strong><br><span style="font-size:12px;color:var(--gray-400)">Jakarta, Surabaya, Bandung</span></td>
+        <td>Rp 15 juta</td>
+        <td class="gold">Rp 4,5 Miliar</td>
+        <td class="green">7–10 Tahun</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-eyebrow" style="margin-top: 32px;">Instrumen Investasi</div>
+  <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 16px;">Syariah, Aman, dan Terbukti</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Instrumen</th><th>Imbal Hasil</th><th>Alokasi</th><th>Platform</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Sukuk Ritel (SR/SBR)</strong><br><span style="font-size:12px;color:var(--gray-400)">Dijamin negara, syariah</span></td>
+        <td class="green">6–7%/tahun</td>
+        <td class="gold">40–50%</td>
+        <td>MONIKA, Bibit</td>
+      </tr>
+      <tr>
+        <td><strong>Properti Kos-kosan</strong><br><span style="font-size:12px;color:var(--gray-400)">Area kampus Jogja/Malang</span></td>
+        <td class="green">8–12%/tahun</td>
+        <td class="gold">30%</td>
+        <td>Setelah modal cukup</td>
+      </tr>
+      <tr>
+        <td><strong>Deposito Syariah</strong><br><span style="font-size:12px;color:var(--gray-400)">Dana cadangan likuid</span></td>
+        <td class="green">4–5%/tahun</td>
+        <td class="gold">15%</td>
+        <td>Bank syariah lokal</td>
+      </tr>
+      <tr>
+        <td><strong>Kebun Produktif</strong><br><span style="font-size:12px;color:var(--gray-400)">Durian/alpukat premium</span></td>
+        <td class="green">Variabel</td>
+        <td class="gold">10–15%</td>
+        <td>Lahan kampung halaman</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="gold-box">
+    <div class="label">⚡ Shortcut Investasi — Lakukan Sebelum Berangkat</div>
+    <p><strong>Buka rekening SBN via aplikasi MONIKA sekarang</strong> — sebelum berangkat ke Australia. Begitu gaji pertama masuk, kamu langsung bisa transfer dan investasi tanpa menunda. Setiap bulan menunda = jutaan rupiah yang hilang dari compounding.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BAB VI — EXIT PLAN
+════════════════════════════════════════ -->
+<div class="page chapter-opener" data-number="VI">
+  <div class="chapter-num">Bab VI</div>
+  <h2>The Exit Plan —<br>Slow Living &amp;<br><em>Merdeka Finansial</em></h2>
+  <p class="chapter-desc">Pulang ke Indonesia bukan karena menyerah. Ini adalah kemenangan yang direncanakan. Kamu menghasilkan Dollar, tapi mengeluarkan Rupiah — selisihnya adalah kebebasan seumur hidup.</p>
+</div>
+
+<div class="page content-page">
+  <div class="page-header">
+    <div class="page-chapter">Bab VI — Exit Plan</div>
+    <div class="page-number">42</div>
+  </div>
+
+  <div class="section-eyebrow">Definisi Kemenangan</div>
+  <div class="section-title">Kapan Kamu<br><em>Sudah Boleh</em> Pulang?</div>
+  <div class="section-subtitle">Jawabannya bukan ketika kamu bosan atau rindu rumah. Jawabannya adalah ketika angkanya sudah membuktikan kamu bebas.</div>
+
+  <div class="highlight-box">
+    <div class="label">✓ Tiga Syarat Boleh Pulang</div>
+    <p><strong>1.</strong> Total aset investasi sudah mencapai Target Angka Keramatmu (pengeluaran/bulan × 300)<br>
+    <strong>2.</strong> Minimal satu aset produktif sudah menghasilkan income pasif tanpa kamu (kos, SBN, kebun)<br>
+    <strong>3.</strong> Dana darurat 12 bulan pengeluaran sudah tersedia terpisah dan tidak disentuh</p>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top: 32px;">Timeline Exit</div>
+  <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 20px;">Bangun Aset Sebelum "Landing"</h3>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="t-period">1–2 Tahun Sebelum Pulang</div>
+      <div class="t-title">Mulai investasi properti dari Australia</div>
+      <div class="t-desc">Koordinasi dengan keluarga atau agen properti terpercaya di Indonesia. Targetkan kos-kosan dekat kampus di Yogyakarta atau Malang untuk income pasif yang stabil.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-period">6–12 Bulan Sebelum Pulang</div>
+      <div class="t-title">Maksimalkan alokasi ke Sukuk Ritel</div>
+      <div class="t-desc">Pastikan portofolio SBN sudah di angka target. Ini adalah aset paling aman dan liquid untuk income pasif bulanan yang langsung bisa dinikmati saat pulang.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-period">1–3 Tahun Sebelum Pulang</div>
+      <div class="t-title">Tanam lahan produktif di kampung</div>
+      <div class="t-desc">Mulai tanam durian atau alpukat di lahan kampung halaman. Pohon buah butuh 3–5 tahun untuk berbuah — saat kamu pulang, kebunmu sudah siap menghasilkan.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-period">Saat Pulang</div>
+      <div class="t-title">Konfirmasi: passive income ≥ pengeluaran bulanan</div>
+      <div class="t-desc">Hitung semua sumber pasif: SBN + kos + kebun. Jika total ≥ pengeluaran bulananmu, kamu sudah resmi merdeka finansial. Tanggal ini adalah hari jadimu sebagai orang bebas.</div>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <div class="label">⚠ Jebakan: The Golden Handcuffs</div>
+    <p><strong>Borgol emas</strong> — perasaan ingin terus bekerja di tambang karena gajinya besar, meski target aset sudah tercapai. Ini adalah jebakan halus yang terasa seperti kebijaksanaan finansial, tapi sebenarnya adalah ketakutan terselubung.</p>
+    <p><strong>Solusinya:</strong> Tetapkan tanggal keluar yang kaku sejak hari pertama berangkat. Tulis di kontrak dengan dirimu sendiri. Kekayaan sejati bukan angka di rekening — itu adalah kendali penuh atas waktumu.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BONUS — SIMULASI 3 SKENARIO
+════════════════════════════════════════ -->
+<div class="page chapter-opener" data-number="★">
+  <div class="chapter-num">Bonus</div>
+  <h2>Simulasi<br>3 Skenario —<br><em>Pilih Jadi Siapa?</em></h2>
+  <p class="chapter-desc">Tiga orang, profil awal sama persis, berangkat di tahun yang sama. Lima tahun kemudian, hasilnya berbeda 1.000%. Di mana letak perbedaannya?</p>
+</div>
+
+<div class="page content-page">
+  <div class="page-header">
+    <div class="page-chapter">Bonus — Simulasi & Analisis Kegagalan</div>
+    <div class="page-number">48</div>
+  </div>
+
+  <div class="section-eyebrow">3 Skenario Nyata</div>
+  <div class="section-title">Disiplin vs Biasa<br>vs <em>Gagal</em></div>
+  <div class="section-subtitle">Semua mulai dari titik yang sama: usia 22, gaji AU$1.800/minggu, tabungan awal Rp 0. Lima tahun kemudian...</div>
+
+  <div class="scenario-grid">
+    <div class="scenario-card great">
+      <div class="s-label">Skenario A</div>
+      <div class="s-title">Si Disiplin</div>
+      <ul>
+        <li>Saving rate 70%</li>
+        <li>Tidak beli kendaraan mewah</li>
+        <li>Rutin investasi SBN tiap bulan</li>
+        <li>Beli kos-kosan di tahun ke-3</li>
+        <li>Tidak tergiur gaya hidup teman</li>
+      </ul>
+      <div class="s-result" style="color: var(--green);">Usia 27: Rp 2,1 Miliar aset. Passive income Rp 8,4 juta/bulan. BEBAS.</div>
+    </div>
+    <div class="scenario-card ok">
+      <div class="s-label">Skenario B</div>
+      <div class="s-title">Si Biasa-Biasa</div>
+      <ul>
+        <li>Saving rate 40%</li>
+        <li>Beli motor, liburan sekali/tahun</li>
+        <li>Investasi tidak konsisten</li>
+        <li>Kirim uang berlebihan ke keluarga</li>
+        <li>Tidak ada aset produktif</li>
+      </ul>
+      <div class="s-result" style="color: #8B6914;">Usia 27: Rp 700 juta tabungan. Butuh 3–4 tahun lagi untuk bebas.</div>
+    </div>
+    <div class="scenario-card bad">
+      <div class="s-label">Skenario C</div>
+      <div class="s-title">Si Gagal</div>
+      <ul>
+        <li>Gaya hidup ikuti teman</li>
+        <li>Beli mobil kredit di tahun ke-2</li>
+        <li>Tidak ada investasi apapun</li>
+        <li>Pulang karena masalah keluarga</li>
+        <li>Modal awal habis semua</li>
+      </ul>
+      <div class="s-result" style="color: var(--red);">Usia 27: Kembali ke titik nol. Hutang cicilan mobil masih berjalan.</div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top: 36px;">Post-Mortem Kegagalan</div>
+  <div class="section-title" style="font-size: 28px;">Di Mana Orang <em>Biasanya Salah?</em></div>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>#</th><th>Kesalahan Fatal</th><th>Dampak</th><th>Pencegahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700; color:var(--red);">01</td>
+        <td><strong>Beli aset liabilitas di awal</strong><br><span style="font-size:12px;color:var(--gray-400)">Mobil, gadget mahal, jam tangan</span></td>
+        <td>Kas terkuras, tidak ada modal investasi</td>
+        <td>Tidak beli apapun di atas AU$500 tanpa 24 jam pertimbangan</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--red);">02</td>
+        <td><strong>Kirim uang berlebihan ke keluarga</strong><br><span style="font-size:12px;color:var(--gray-400)">Tekanan sosial vs kebebasan finansial</span></td>
+        <td>Saving rate turun ke 20–30%</td>
+        <td>Tetapkan batas kiriman tetap, eduKasi keluarga sejak awal</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--red);">03</td>
+        <td><strong>Tidak ada target angka yang jelas</strong><br><span style="font-size:12px;color:var(--gray-400)">Kerja keras tanpa arah</span></td>
+        <td>Perpanjang kontrak terus tanpa exit</td>
+        <td>Hitung Target Angka Keramat sebelum berangkat</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--red);">04</td>
+        <td><strong>Menunda investasi karena "nanti dulu"</strong><br><span style="font-size:12px;color:var(--gray-400)">Tunggu kumpul banyak baru invest</span></td>
+        <td>Kehilangan compounding bulanan</td>
+        <td>Investasi hari pertama gaji masuk, berapapun jumlahnya</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="gold-box">
+    <div class="label">🎯 Apakah Jalur Ini Cocok Untuk Kamu?</div>
+    <p><strong>Cocok jika:</strong> Kamu berusia 18–28 tahun, fisik sehat, siap kerja di lingkungan keras, dan punya disiplin finansial yang kuat (atau mau membangunnya sekarang).</p>
+    <p><strong>Tidak cocok jika:</strong> Kamu bergantung pada keluarga dan tidak bisa pisah jarak jauh, tidak bisa bekerja dalam sistem yang terstruktur ketat, atau mencari penghasilan besar tanpa effort nyata.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PENUTUP — CTA
+════════════════════════════════════════ -->
+<div class="page cta-section">
+  <div class="cta-badge">Penutup — Saatnya Bergerak</div>
+
+  <div class="cta-title">Satu Tindakan<br>Hari Ini Lebih<br>Berharga dari<br><em>100 Halaman</em><br>yang Dibaca Ulang</div>
+
+  <p class="cta-body">Sistemnya sudah jelas. Jalannya terbuka. Angkanya sudah terbukti. Satu-satunya yang membedakan mereka yang berhasil dengan yang tidak adalah keputusan yang dibuat hari ini — bukan bulan depan.</p>
+
+  <div class="cta-actions">
+    <div class="cta-action">
+      <div class="action-num">01</div>
+      <div class="action-text">
+        <strong>Urus paspor hari ini juga</strong>
+        <span>Jangan tunggu modal terkumpul. Dokumen butuh waktu — mulai sekarang.</span>
+      </div>
+    </div>
+    <div class="cta-action">
+      <div class="action-num">02</div>
+      <div class="action-text">
+        <strong>Hitung Target Angka Keramatmu</strong>
+        <span>Pengeluaran ideal/bulan × 300 = total aset yang kamu butuhkan. Tulis angka itu sekarang.</span>
+      </div>
+    </div>
+    <div class="cta-action">
+      <div class="action-num">03</div>
+      <div class="action-text">
+        <strong>Buka akun MONIKA/Bibit hari ini</strong>
+        <span>Gratis, 5 menit. Agar saat gaji pertama masuk, investasi langsung bisa dilakukan tanpa menunda sehari pun.</span>
+      </div>
+    </div>
+    <div class="cta-action">
+      <div class="action-num">04</div>
+      <div class="action-text">
+        <strong>Pilih satu skill digital dan mulai besok</strong>
+        <span>Video editing, desain, atau copywriting. 1 jam per hari. Ini akan membangun "otot finansial" sebelum Dollar sesungguhnya ada di tanganmu.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-urgency">
+    <div class="cta-urgency-item">Kuota Visa WHV Sangat Terbatas</div>
+    <div class="cta-urgency-item">Batas Usia 30 Tahun Tidak Bisa Dinegosiasi</div>
+    <div class="cta-urgency-item">Waktu Adalah Aset Yang Tidak Bisa Dibeli Kembali</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     CHECKLIST 30 HARI
+════════════════════════════════════════ -->
+<div class="page content-page" style="background: var(--black);">
+  <div class="page-header" style="border-color: rgba(255,255,255,0.1);">
+    <div class="page-chapter">Checklist 30 Hari Pertama</div>
+    <div class="page-number" style="color: var(--gray-600);">54</div>
+  </div>
+
+  <div class="section-eyebrow">Rencana Aksi</div>
+  <div class="section-title" style="color: var(--white);">30 Hari untuk <em>Mengubah</em><br>Niat Menjadi Sistem</div>
+
+  <div class="two-col" style="margin-top: 28px;">
+    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 24px;">
+      <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--gold); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:16px;">Minggu 1 — Fondasi Admin</div>
+      <ul class="checklist" style="color: var(--white);">
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Buat/perbarui paspor</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Buka rekening khusus "Dana Australia"</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Audit pengeluaran bulanan sekarang</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Hitung Target Angka Keramat</li>
+      </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 24px;">
+      <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--gold); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:16px;">Minggu 2 — Skill & Bahasa</div>
+      <ul class="checklist" style="color: var(--white);">
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Pilih 1 skill digital dan mulai belajar</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">1 jam/hari latihan bahasa Inggris</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Daftar kursus IELTS/PTE terdekat</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Buat akun Fiverr atau Upwork</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 24px;">
+      <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--gold); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:16px;">Minggu 3 — Riset Pasar</div>
+      <ul class="checklist" style="color: var(--white);">
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Cari "FIFO entry level Perth" di Seek</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Bergabung grup FB komunitas WA Indonesia</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Riset biaya hidup Perth/Darwin</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Baca info terbaru kuota visa WHV</li>
+      </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 24px;">
+      <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--gold); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:16px;">Minggu 4 — Tindakan Nyata</div>
+      <ul class="checklist" style="color: var(--white);">
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Buka akun MONIKA atau Bibit</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Investasi pertama (berapapun jumlahnya)</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Tulis target tahun keberangkatan</li>
+        <li style="border-color: rgba(255,255,255,0.06); color: var(--white);">Ceritakan rencanamu ke 1 orang terpercaya</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 40px; text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div style="font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; font-style: italic; color: var(--gold); margin-bottom: 12px;">"Sampai jumpa di Perth."</div>
+    <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.15em;">FIFO CODE · Edisi Premium 2026</div>
+  </div>
+</div>
+
+</body>
+</html>
